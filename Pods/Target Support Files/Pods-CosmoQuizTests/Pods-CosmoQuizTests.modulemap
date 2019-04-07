@@ -1,0 +1,6 @@
+framework module Pods_CosmoQuizTests {
+  umbrella header "Pods-CosmoQuizTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
