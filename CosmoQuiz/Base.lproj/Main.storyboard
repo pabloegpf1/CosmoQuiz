@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,75 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CosmoQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z64-e8-sIS">
+                                <rect key="frame" x="28" y="194" width="175" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="z64-e8-sIS" secondAttribute="height" multiplier="1:1" id="Wkx-8r-Gp8"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DbE-NG-8Cm">
+                                <rect key="frame" x="211" y="194" width="175" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DbE-NG-8Cm" secondAttribute="height" multiplier="1:1" id="Sgg-Zs-36G"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xfQ-UQ-vYI">
+                                <rect key="frame" x="28" y="377" width="175" height="174"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xfQ-UQ-vYI" secondAttribute="height" multiplier="175:174" id="LJH-4x-WEs"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wPu-a6-tJI">
+                                <rect key="frame" x="211" y="377" width="175" height="174"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wPu-a6-tJI" secondAttribute="height" multiplier="175:174" id="K40-r8-Xx8"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mV-Kd-pRO">
+                                <rect key="frame" x="176" y="615" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="odT-Ph-9Yj"/>
+                                </constraints>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5gk-uL-0lZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wPu-a6-tJI" firstAttribute="top" secondItem="DbE-NG-8Cm" secondAttribute="bottom" constant="8" symbolic="YES" id="6LP-jy-YSM"/>
+                            <constraint firstItem="wPu-a6-tJI" firstAttribute="leading" secondItem="xfQ-UQ-vYI" secondAttribute="trailing" constant="8" symbolic="YES" id="7Ob-7a-RVz"/>
+                            <constraint firstItem="DbE-NG-8Cm" firstAttribute="leading" secondItem="wPu-a6-tJI" secondAttribute="leading" id="EgT-cB-jHe"/>
+                            <constraint firstItem="xfQ-UQ-vYI" firstAttribute="bottom" secondItem="wPu-a6-tJI" secondAttribute="bottom" id="Gik-cs-ecP"/>
+                            <constraint firstItem="0mV-Kd-pRO" firstAttribute="top" secondItem="xfQ-UQ-vYI" secondAttribute="bottom" constant="64" id="UGK-3r-Le7"/>
+                            <constraint firstItem="DbE-NG-8Cm" firstAttribute="leading" secondItem="z64-e8-sIS" secondAttribute="trailing" constant="8" symbolic="YES" id="Uti-8d-QHS"/>
+                            <constraint firstItem="z64-e8-sIS" firstAttribute="top" secondItem="DbE-NG-8Cm" secondAttribute="top" id="b57-eQ-IgY"/>
+                            <constraint firstItem="xfQ-UQ-vYI" firstAttribute="top" secondItem="wPu-a6-tJI" secondAttribute="top" id="l5V-e3-8Vy"/>
+                            <constraint firstItem="xfQ-UQ-vYI" firstAttribute="top" secondItem="z64-e8-sIS" secondAttribute="bottom" constant="8" symbolic="YES" id="tLV-VB-AN2"/>
+                            <constraint firstItem="z64-e8-sIS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="tvr-JT-Aqk"/>
+                            <constraint firstItem="0mV-Kd-pRO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v7P-xx-jUX"/>
+                            <constraint firstItem="z64-e8-sIS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="vvj-jW-Wup"/>
+                            <constraint firstItem="z64-e8-sIS" firstAttribute="leading" secondItem="xfQ-UQ-vYI" secondAttribute="leading" id="w2E-Ov-ARs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DbE-NG-8Cm" secondAttribute="trailing" constant="28" id="yq6-LC-KoT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outletCollection property="ImageOutlet" destination="z64-e8-sIS" collectionClass="NSMutableArray" id="Zz8-n0-d53"/>
+                        <outletCollection property="ImageOutlet" destination="DbE-NG-8Cm" collectionClass="NSMutableArray" id="fQR-T5-hau"/>
+                        <outletCollection property="ImageOutlet" destination="xfQ-UQ-vYI" collectionClass="NSMutableArray" id="PpE-xY-3zM"/>
+                        <outletCollection property="ImageOutlet" destination="wPu-a6-tJI" collectionClass="NSMutableArray" id="vrp-ao-Tq9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139.13043478260872" y="85.714285714285708"/>
         </scene>
     </scenes>
 </document>
