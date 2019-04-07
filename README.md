@@ -1,5 +1,3 @@
-<img align="left" src="https://imgur.com/R8x4Eq4.png" width="50">
-
 # CosmoQuiz
 ### Guess the name of archived Astronomy Pictures of the Day
 Each day NASA features a image or photograph of our fascinating universe, along with a brief explanation written by a professional astronomer.
