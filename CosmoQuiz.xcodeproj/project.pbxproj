@@ -1,0 +1,734 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		594FA25FB66159CE31AE400B /* Pods_CosmoQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3BA2D91391010018D42DBC /* Pods_CosmoQuizTests.framework */; };
+		6810941DBD9BBB1BDEA0DBF0 /* Pods_CosmoQuizUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374CA317213FDFFFC5CF2A64 /* Pods_CosmoQuizUITests.framework */; };
+		6EC6E07A22571549002D2232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6E07922571549002D2232 /* AppDelegate.swift */; };
+		6EC6E07C22571549002D2232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6E07B22571549002D2232 /* ViewController.swift */; };
+		6EC6E07F22571549002D2232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC6E07D22571549002D2232 /* Main.storyboard */; };
+		6EC6E0812257154B002D2232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EC6E0802257154B002D2232 /* Assets.xcassets */; };
+		6EC6E0842257154B002D2232 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC6E0822257154B002D2232 /* LaunchScreen.storyboard */; };
+		6EC6E08F2257154C002D2232 /* CosmoQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6E08E2257154C002D2232 /* CosmoQuizTests.swift */; };
+		6EC6E09A2257154C002D2232 /* CosmoQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6E0992257154C002D2232 /* CosmoQuizUITests.swift */; };
+		7B49981B2C8B37EF5DF91D84 /* Pods_CosmoQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C445A896CE1BB99EC9F5CC17 /* Pods_CosmoQuiz.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6EC6E08B2257154C002D2232 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EC6E06E22571549002D2232 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EC6E07522571549002D2232;
+			remoteInfo = CosmoQuiz;
+		};
+		6EC6E0962257154C002D2232 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EC6E06E22571549002D2232 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EC6E07522571549002D2232;
+			remoteInfo = CosmoQuiz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		374CA317213FDFFFC5CF2A64 /* Pods_CosmoQuizUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmoQuizUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EC6E07622571549002D2232 /* CosmoQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CosmoQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EC6E07922571549002D2232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6EC6E07B22571549002D2232 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6EC6E07E22571549002D2232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6EC6E0802257154B002D2232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6EC6E0832257154B002D2232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6EC6E0852257154B002D2232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EC6E08A2257154C002D2232 /* CosmoQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CosmoQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EC6E08E2257154C002D2232 /* CosmoQuizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmoQuizTests.swift; sourceTree = "<group>"; };
+		6EC6E0902257154C002D2232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EC6E0952257154C002D2232 /* CosmoQuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CosmoQuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EC6E0992257154C002D2232 /* CosmoQuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmoQuizUITests.swift; sourceTree = "<group>"; };
+		6EC6E09B2257154C002D2232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E9D2A2AD708309A20753B0E /* Pods-CosmoQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuiz.debug.xcconfig"; path = "Target Support Files/Pods-CosmoQuiz/Pods-CosmoQuiz.debug.xcconfig"; sourceTree = "<group>"; };
+		92A58082FF7651F25084C316 /* Pods-CosmoQuizUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuizUITests.release.xcconfig"; path = "Target Support Files/Pods-CosmoQuizUITests/Pods-CosmoQuizUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9EB33C2ADFFEB78A6A0813DB /* Pods-CosmoQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuizTests.release.xcconfig"; path = "Target Support Files/Pods-CosmoQuizTests/Pods-CosmoQuizTests.release.xcconfig"; sourceTree = "<group>"; };
+		A16634DB5A193A9484B65F81 /* Pods-CosmoQuizUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuizUITests.debug.xcconfig"; path = "Target Support Files/Pods-CosmoQuizUITests/Pods-CosmoQuizUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C445A896CE1BB99EC9F5CC17 /* Pods_CosmoQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmoQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8495BE9E8C7F2F78F126D3F /* Pods-CosmoQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuiz.release.xcconfig"; path = "Target Support Files/Pods-CosmoQuiz/Pods-CosmoQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		DA3BA2D91391010018D42DBC /* Pods_CosmoQuizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmoQuizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5B3B087DB4D9000F498F1F4 /* Pods-CosmoQuizTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuizTests.debug.xcconfig"; path = "Target Support Files/Pods-CosmoQuizTests/Pods-CosmoQuizTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6EC6E07322571549002D2232 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B49981B2C8B37EF5DF91D84 /* Pods_CosmoQuiz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EC6E0872257154C002D2232 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				594FA25FB66159CE31AE400B /* Pods_CosmoQuizTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EC6E0922257154C002D2232 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6810941DBD9BBB1BDEA0DBF0 /* Pods_CosmoQuizUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6EC6E06D22571549002D2232 = {
+			isa = PBXGroup;
+			children = (
+				6EC6E07822571549002D2232 /* CosmoQuiz */,
+				6EC6E08D2257154C002D2232 /* CosmoQuizTests */,
+				6EC6E0982257154C002D2232 /* CosmoQuizUITests */,
+				6EC6E07722571549002D2232 /* Products */,
+				D033D1FB6F2AA11EB61AE74A /* Pods */,
+				C412FAA3E20DB4D98CB6C640 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6EC6E07722571549002D2232 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EC6E07622571549002D2232 /* CosmoQuiz.app */,
+				6EC6E08A2257154C002D2232 /* CosmoQuizTests.xctest */,
+				6EC6E0952257154C002D2232 /* CosmoQuizUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6EC6E07822571549002D2232 /* CosmoQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				6EC6E07922571549002D2232 /* AppDelegate.swift */,
+				6EC6E07B22571549002D2232 /* ViewController.swift */,
+				6EC6E07D22571549002D2232 /* Main.storyboard */,
+				6EC6E0802257154B002D2232 /* Assets.xcassets */,
+				6EC6E0822257154B002D2232 /* LaunchScreen.storyboard */,
+				6EC6E0852257154B002D2232 /* Info.plist */,
+			);
+			path = CosmoQuiz;
+			sourceTree = "<group>";
+		};
+		6EC6E08D2257154C002D2232 /* CosmoQuizTests */ = {
+			isa = PBXGroup;
+			children = (
+				6EC6E08E2257154C002D2232 /* CosmoQuizTests.swift */,
+				6EC6E0902257154C002D2232 /* Info.plist */,
+			);
+			path = CosmoQuizTests;
+			sourceTree = "<group>";
+		};
+		6EC6E0982257154C002D2232 /* CosmoQuizUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6EC6E0992257154C002D2232 /* CosmoQuizUITests.swift */,
+				6EC6E09B2257154C002D2232 /* Info.plist */,
+			);
+			path = CosmoQuizUITests;
+			sourceTree = "<group>";
+		};
+		C412FAA3E20DB4D98CB6C640 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C445A896CE1BB99EC9F5CC17 /* Pods_CosmoQuiz.framework */,
+				DA3BA2D91391010018D42DBC /* Pods_CosmoQuizTests.framework */,
+				374CA317213FDFFFC5CF2A64 /* Pods_CosmoQuizUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D033D1FB6F2AA11EB61AE74A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E9D2A2AD708309A20753B0E /* Pods-CosmoQuiz.debug.xcconfig */,
+				D8495BE9E8C7F2F78F126D3F /* Pods-CosmoQuiz.release.xcconfig */,
+				E5B3B087DB4D9000F498F1F4 /* Pods-CosmoQuizTests.debug.xcconfig */,
+				9EB33C2ADFFEB78A6A0813DB /* Pods-CosmoQuizTests.release.xcconfig */,
+				A16634DB5A193A9484B65F81 /* Pods-CosmoQuizUITests.debug.xcconfig */,
+				92A58082FF7651F25084C316 /* Pods-CosmoQuizUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6EC6E07522571549002D2232 /* CosmoQuiz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EC6E09E2257154C002D2232 /* Build configuration list for PBXNativeTarget "CosmoQuiz" */;
+			buildPhases = (
+				5146FB6A70FBDE20D63C6100 /* [CP] Check Pods Manifest.lock */,
+				6EC6E07222571549002D2232 /* Sources */,
+				6EC6E07322571549002D2232 /* Frameworks */,
+				6EC6E07422571549002D2232 /* Resources */,
+				A543CE7BD3F8D0197241071B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CosmoQuiz;
+			productName = CosmoQuiz;
+			productReference = 6EC6E07622571549002D2232 /* CosmoQuiz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6EC6E0892257154C002D2232 /* CosmoQuizTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EC6E0A12257154C002D2232 /* Build configuration list for PBXNativeTarget "CosmoQuizTests" */;
+			buildPhases = (
+				C51CCB082D410E7BD7261F8E /* [CP] Check Pods Manifest.lock */,
+				6EC6E0862257154C002D2232 /* Sources */,
+				6EC6E0872257154C002D2232 /* Frameworks */,
+				6EC6E0882257154C002D2232 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EC6E08C2257154C002D2232 /* PBXTargetDependency */,
+			);
+			name = CosmoQuizTests;
+			productName = CosmoQuizTests;
+			productReference = 6EC6E08A2257154C002D2232 /* CosmoQuizTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6EC6E0942257154C002D2232 /* CosmoQuizUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EC6E0A42257154C002D2232 /* Build configuration list for PBXNativeTarget "CosmoQuizUITests" */;
+			buildPhases = (
+				3B0EF13606E27F06E5006413 /* [CP] Check Pods Manifest.lock */,
+				6EC6E0912257154C002D2232 /* Sources */,
+				6EC6E0922257154C002D2232 /* Frameworks */,
+				6EC6E0932257154C002D2232 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EC6E0972257154C002D2232 /* PBXTargetDependency */,
+			);
+			name = CosmoQuizUITests;
+			productName = CosmoQuizUITests;
+			productReference = 6EC6E0952257154C002D2232 /* CosmoQuizUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6EC6E06E22571549002D2232 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Pablo Escriva";
+				TargetAttributes = {
+					6EC6E07522571549002D2232 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					6EC6E0892257154C002D2232 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 6EC6E07522571549002D2232;
+					};
+					6EC6E0942257154C002D2232 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 6EC6E07522571549002D2232;
+					};
+				};
+			};
+			buildConfigurationList = 6EC6E07122571549002D2232 /* Build configuration list for PBXProject "CosmoQuiz" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6EC6E06D22571549002D2232;
+			productRefGroup = 6EC6E07722571549002D2232 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6EC6E07522571549002D2232 /* CosmoQuiz */,
+				6EC6E0892257154C002D2232 /* CosmoQuizTests */,
+				6EC6E0942257154C002D2232 /* CosmoQuizUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6EC6E07422571549002D2232 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EC6E0842257154B002D2232 /* LaunchScreen.storyboard in Resources */,
+				6EC6E0812257154B002D2232 /* Assets.xcassets in Resources */,
+				6EC6E07F22571549002D2232 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EC6E0882257154C002D2232 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EC6E0932257154C002D2232 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B0EF13606E27F06E5006413 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CosmoQuizUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5146FB6A70FBDE20D63C6100 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CosmoQuiz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A543CE7BD3F8D0197241071B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CosmoQuiz/Pods-CosmoQuiz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CosmoQuiz/Pods-CosmoQuiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C51CCB082D410E7BD7261F8E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CosmoQuizTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6EC6E07222571549002D2232 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EC6E07C22571549002D2232 /* ViewController.swift in Sources */,
+				6EC6E07A22571549002D2232 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EC6E0862257154C002D2232 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EC6E08F2257154C002D2232 /* CosmoQuizTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EC6E0912257154C002D2232 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EC6E09A2257154C002D2232 /* CosmoQuizUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6EC6E08C2257154C002D2232 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6EC6E07522571549002D2232 /* CosmoQuiz */;
+			targetProxy = 6EC6E08B2257154C002D2232 /* PBXContainerItemProxy */;
+		};
+		6EC6E0972257154C002D2232 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6EC6E07522571549002D2232 /* CosmoQuiz */;
+			targetProxy = 6EC6E0962257154C002D2232 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6EC6E07D22571549002D2232 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EC6E07E22571549002D2232 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6EC6E0822257154B002D2232 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EC6E0832257154B002D2232 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6EC6E09C2257154C002D2232 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		6EC6E09D2257154C002D2232 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6EC6E09F2257154C002D2232 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E9D2A2AD708309A20753B0E /* Pods-CosmoQuiz.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RYRMS9S9RS;
+				INFOPLIST_FILE = CosmoQuiz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pabloescriva.CosmoQuiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6EC6E0A02257154C002D2232 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8495BE9E8C7F2F78F126D3F /* Pods-CosmoQuiz.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RYRMS9S9RS;
+				INFOPLIST_FILE = CosmoQuiz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pabloescriva.CosmoQuiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6EC6E0A22257154C002D2232 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5B3B087DB4D9000F498F1F4 /* Pods-CosmoQuizTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RYRMS9S9RS;
+				INFOPLIST_FILE = CosmoQuizTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pabloescriva.CosmoQuizTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CosmoQuiz.app/CosmoQuiz";
+			};
+			name = Debug;
+		};
+		6EC6E0A32257154C002D2232 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EB33C2ADFFEB78A6A0813DB /* Pods-CosmoQuizTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RYRMS9S9RS;
+				INFOPLIST_FILE = CosmoQuizTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pabloescriva.CosmoQuizTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CosmoQuiz.app/CosmoQuiz";
+			};
+			name = Release;
+		};
+		6EC6E0A52257154C002D2232 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A16634DB5A193A9484B65F81 /* Pods-CosmoQuizUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RYRMS9S9RS;
+				INFOPLIST_FILE = CosmoQuizUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pabloescriva.CosmoQuizUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CosmoQuiz;
+			};
+			name = Debug;
+		};
+		6EC6E0A62257154C002D2232 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92A58082FF7651F25084C316 /* Pods-CosmoQuizUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RYRMS9S9RS;
+				INFOPLIST_FILE = CosmoQuizUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pabloescriva.CosmoQuizUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CosmoQuiz;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6EC6E07122571549002D2232 /* Build configuration list for PBXProject "CosmoQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EC6E09C2257154C002D2232 /* Debug */,
+				6EC6E09D2257154C002D2232 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EC6E09E2257154C002D2232 /* Build configuration list for PBXNativeTarget "CosmoQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EC6E09F2257154C002D2232 /* Debug */,
+				6EC6E0A02257154C002D2232 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EC6E0A12257154C002D2232 /* Build configuration list for PBXNativeTarget "CosmoQuizTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EC6E0A22257154C002D2232 /* Debug */,
+				6EC6E0A32257154C002D2232 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EC6E0A42257154C002D2232 /* Build configuration list for PBXNativeTarget "CosmoQuizUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EC6E0A52257154C002D2232 /* Debug */,
+				6EC6E0A62257154C002D2232 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6EC6E06E22571549002D2232 /* Project object */;
+}
