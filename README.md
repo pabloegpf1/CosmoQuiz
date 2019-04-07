@@ -4,7 +4,7 @@ Each day NASA features a image or photograph of our fascinating universe, along 
 
 CosmoQuiz is an iOS app that uses Nasa's API to generate random Astronomy Pictures of the Day (APOD) from the archive. 
 
-Users of CosmoQuiz can solve quizes about this pictures inside the app. In each round you will see 4 pictures and a title for one of them, to earn a point you must select the correct picture. Your points will be public and part of a leaderboard in which you can check the highest ranked users.
+Users of CosmoQuiz can solve quizes about this pictures. In each round you will see 4 pictures and a title for one of them, to earn a point you must select the correct picture. Your points will be public and part of a leaderboard in which you can check the highest ranked users.
 
 You can also learn by navigating through pictures of the universe and reading the descriptions. This is also a great way of training for the quizes.
 
