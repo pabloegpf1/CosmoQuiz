@@ -16,7 +16,7 @@ CosmoQuiz also lets you check the current APOD and share it in your social media
 
 ## Members
 * Developer: Pablo Escriva
-* Code reviewer: (TBD)
+* Code reviewer: Liyao Jiang
 
 ## Must-have Features
 1. User authentication - 3 hours
