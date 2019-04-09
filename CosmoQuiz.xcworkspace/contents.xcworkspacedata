@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:CosmoQuiz/logo.png">
+   </FileRef>
+   <FileRef
       location = "group:CosmoQuiz.xcodeproj">
    </FileRef>
    <FileRef
