@@ -23,12 +23,11 @@ struct NasaAPI{
         
         jsonRequest.enter()
         Alamofire.request(url).responseJSON{ response in
-            
             json = response.result.value as! Array<[String:AnyObject]>
   
             quizItem.randomIndex = Int.random(in: 0 ... 3)
             quizItem.randomTitle = json[quizItem.randomIndex]["title"] as! String
-            
+
             jsonRequest.leave()
         }
         
@@ -36,7 +35,7 @@ struct NasaAPI{
             
             let imageDownload = DispatchGroup()
             for i in 0 ... json.count-1{
-                
+                print("URL: ---->\(json[i]["url"] as! String)")
                 imageDownload.enter()
                 Alamofire.request(json[i]["url"] as! String).responseData { response in
                     if response.error == nil {

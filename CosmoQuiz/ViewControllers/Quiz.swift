@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import Foundation
 
-class ViewController: UIViewController {
+class Quiz: UIViewController {
     
 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -22,6 +22,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nextQuizItem()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     func nextQuizItem() {

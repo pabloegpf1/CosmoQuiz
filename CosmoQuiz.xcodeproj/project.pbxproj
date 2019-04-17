@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		594FA25FB66159CE31AE400B /* Pods_CosmoQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3BA2D91391010018D42DBC /* Pods_CosmoQuizTests.framework */; };
 		6810941DBD9BBB1BDEA0DBF0 /* Pods_CosmoQuizUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374CA317213FDFFFC5CF2A64 /* Pods_CosmoQuizUITests.framework */; };
+		6E3335432266D108005927C6 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3335422266D107005927C6 /* HomeScreen.swift */; };
 		6EC6E07A22571549002D2232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6E07922571549002D2232 /* AppDelegate.swift */; };
-		6EC6E07C22571549002D2232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6E07B22571549002D2232 /* ViewController.swift */; };
+		6EC6E07C22571549002D2232 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6E07B22571549002D2232 /* Quiz.swift */; };
 		6EC6E07F22571549002D2232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC6E07D22571549002D2232 /* Main.storyboard */; };
 		6EC6E0812257154B002D2232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EC6E0802257154B002D2232 /* Assets.xcassets */; };
 		6EC6E0842257154B002D2232 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC6E0822257154B002D2232 /* LaunchScreen.storyboard */; };
@@ -41,9 +42,10 @@
 
 /* Begin PBXFileReference section */
 		374CA317213FDFFFC5CF2A64 /* Pods_CosmoQuizUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmoQuizUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E3335422266D107005927C6 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		6EC6E07622571549002D2232 /* CosmoQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CosmoQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC6E07922571549002D2232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6EC6E07B22571549002D2232 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6EC6E07B22571549002D2232 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		6EC6E07E22571549002D2232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6EC6E0802257154B002D2232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EC6E0832257154B002D2232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -161,7 +163,8 @@
 		6EEA60B5225B397D00D809AA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6EC6E07B22571549002D2232 /* ViewController.swift */,
+				6EC6E07B22571549002D2232 /* Quiz.swift */,
+				6E3335422266D107005927C6 /* HomeScreen.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -429,8 +432,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EC6E07C22571549002D2232 /* ViewController.swift in Sources */,
+				6EC6E07C22571549002D2232 /* Quiz.swift in Sources */,
 				6EEA60B8225BD93400D809AA /* QuizItem.swift in Sources */,
+				6E3335432266D108005927C6 /* HomeScreen.swift in Sources */,
 				6EEA60B3225B2DE300D809AA /* NasaAPI.swift in Sources */,
 				6EC6E07A22571549002D2232 /* AppDelegate.swift in Sources */,
 			);
