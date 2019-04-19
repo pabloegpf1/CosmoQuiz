@@ -79,7 +79,7 @@ class Quiz: UIViewController {
         nextQuizItem()
     }
     
-    func highlightImages(selectedImage:Int){
+    func highlightImages(selectedImage:Int){ //TO DO
         ImageOutlet[selectedImage].layer.borderWidth = 10
         if(selectedImage == correctImage){
             ImageOutlet[selectedImage].layer.borderColor = UIColor.green.cgColor

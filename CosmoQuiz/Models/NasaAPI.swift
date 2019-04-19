@@ -11,15 +11,16 @@ import Alamofire
 
 struct NasaAPI{
     
-    let url = "https://api.nasa.gov/planetary/apod?api_key=\(ProcessInfo.processInfo.environment["nasaApiKey"] ?? "")&count=4"
-    
     static let request = NasaAPI()
+    
+    let jsonRequest = DispatchGroup()
+    let imageDownload = DispatchGroup()
     
     func getQuizItem(completion: @escaping (QuizItem?) -> ()){
         
+        let url = "https://api.nasa.gov/planetary/apod?api_key=\(ProcessInfo.processInfo.environment["nasaApiKey"] ?? "")&count=4"
         var json:Array<[String:AnyObject]> = []
         let quizItem:QuizItem = QuizItem()
-        let jsonRequest = DispatchGroup()
         
         jsonRequest.enter()
         Alamofire.request(url).responseJSON{ response in
@@ -28,15 +29,14 @@ struct NasaAPI{
             quizItem.randomIndex = Int.random(in: 0 ... 3)
             quizItem.randomTitle = json[quizItem.randomIndex]["title"] as! String
 
-            jsonRequest.leave()
+            self.jsonRequest.leave()
         }
         
         jsonRequest.notify(queue: .main) {
             
-            let imageDownload = DispatchGroup()
             for i in 0 ... json.count-1{
                 print("URL: ---->\(json[i]["url"] as! String)")
-                imageDownload.enter()
+                self.imageDownload.enter()
                 Alamofire.request(json[i]["url"] as! String).responseData { response in
                     if response.error == nil {
                         if let data = response.data {
@@ -46,14 +46,48 @@ struct NasaAPI{
                         print("Error: could not download Images")
                         completion(nil)
                     }
-                    imageDownload.leave()
+                    self.imageDownload.leave()
                 }
             }
             
-            imageDownload.notify(queue: .main) {
+            self.imageDownload.notify(queue: .main) {
                 completion(quizItem)
             }
         }
+    }
+    
+    func getDiscoverItem(date:String,completion: @escaping (DiscoverItem?) -> ()){
+        
+        let url = "https://api.nasa.gov/planetary/apod?api_key=\(ProcessInfo.processInfo.environment["nasaApiKey"] ?? "")&date=\(date)"
+        let discoverItem:DiscoverItem = DiscoverItem()
+        var json:[String:AnyObject] = [:]
+        
+        jsonRequest.enter()
+        Alamofire.request(url).responseJSON{ response in
+            print("RESPONSE: \(response)")
+            json = response.result.value as! [String:AnyObject]
+            
+            discoverItem.title = json["title"] as! String
+            discoverItem.description = json["explanation"] as! String
+            
+            self.jsonRequest.leave()
+        }
+        
+        jsonRequest.notify(queue: .main) {
+            self.imageDownload.enter()
+            Alamofire.request(json["url"] as! String).responseData { response in
+                guard let image = UIImage(data: response.data!) else{
+                    print("Error: could not download Image")
+                    return
+                }
+                discoverItem.image = image
+                self.imageDownload.leave()
+            }
+            self.imageDownload.notify(queue: .main) {
+                completion(discoverItem)
+            }
+        }
+        
     }
     
 }
