@@ -8,6 +8,8 @@ target 'CosmoQuiz' do
   # Pods for CosmoQuiz
   pod 'Alamofire', '~> 4.7'
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
 
   target 'CosmoQuizTests' do
     inherit! :search_paths
