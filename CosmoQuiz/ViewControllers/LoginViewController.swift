@@ -33,4 +33,17 @@ class LoginViewController: UIViewController {
         })
     }
 
+    @IBAction func loginAnonimously(_ sender: Any) {
+        FirebaseAPI.request.loginAnonimously() { (user) in
+            if(user == nil){
+                let alertController = UIAlertController(title: "Error", message: "Please Try Again", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+            }else{
+                self.performSegue(withIdentifier: "loginToHome", sender: self)
+            }
+        }
+    }
+    
 }

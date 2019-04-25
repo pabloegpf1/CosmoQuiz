@@ -20,12 +20,10 @@ struct FirebaseAPI{
                 let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                 changeRequest?.displayName = "\(displayname)"
                 changeRequest?.commitChanges { error in
-                    print("Error changing displayname")
                     completion(nil)
                 }
                 completion(user)
             }else{
-                print("Error registering user:\(displayname)")
                 completion(nil)
             }
         }
@@ -36,10 +34,28 @@ struct FirebaseAPI{
             if error == nil{
                 completion(user)
             }else{
-                print(email)
                 completion(nil)
             }
         }
+    }
+    
+    func loginAnonimously(completion: @escaping (AuthDataResult?) -> ()){
+        Auth.auth().signInAnonymously() { (authResult, error) in
+            if error == nil{
+                completion(authResult)
+            }else{
+                completion(nil)
+            }
+        }
+    }
+    
+    func signOut(completion: @escaping (Error?) -> ()){
+        do {
+            try Auth.auth().signOut()
+        } catch (let error) {
+            completion(error)
+        }
+        completion(nil)
     }
 
 }

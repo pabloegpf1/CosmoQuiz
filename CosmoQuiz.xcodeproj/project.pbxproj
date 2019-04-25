@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		594FA25FB66159CE31AE400B /* Pods_CosmoQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3BA2D91391010018D42DBC /* Pods_CosmoQuizTests.framework */; };
-		6810941DBD9BBB1BDEA0DBF0 /* Pods_CosmoQuizUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374CA317213FDFFFC5CF2A64 /* Pods_CosmoQuizUITests.framework */; };
+		0506D5ED8C9B540406CD5E8F /* Pods_CosmoQuizUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FA619C79D4576B6B55C2C4C /* Pods_CosmoQuizUITests.framework */; };
 		6E137162226A31900087E924 /* FirebaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E137161226A31900087E924 /* FirebaseAPI.swift */; };
 		6E137164226A34D80087E924 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E137163226A34D80087E924 /* RegisterViewController.swift */; };
 		6E3335432266D108005927C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3335422266D107005927C6 /* HomeViewController.swift */; };
-		6E8FB6F52268F85E001CB8D8 /* DiscoverItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8FB6F42268F85E001CB8D8 /* DiscoverItem.swift */; };
+		6E548C2E226FFA4F002160F0 /* ApodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E548C2D226FFA4F002160F0 /* ApodViewController.swift */; };
+		6E8FB6F52268F85E001CB8D8 /* ApodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8FB6F42268F85E001CB8D8 /* ApodItem.swift */; };
 		6E8FB6F72268FD12001CB8D8 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8FB6F62268FD12001CB8D8 /* DiscoverViewController.swift */; };
 		6E9604AE226CECA900CE47DD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9604AD226CECA900CE47DD /* LoginViewController.swift */; };
 		6E9604B0226CF2B200CE47DD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9604AF226CF2B200CE47DD /* ProfileViewController.swift */; };
@@ -26,7 +26,8 @@
 		6EEA60B3225B2DE300D809AA /* NasaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA60B2225B2DE300D809AA /* NasaAPI.swift */; };
 		6EEA60B8225BD93400D809AA /* QuizItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA60B7225BD93400D809AA /* QuizItem.swift */; };
 		6EFB23CB225C138C00E4A2B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EFB23CA225C135500E4A2B1 /* GoogleService-Info.plist */; };
-		7B49981B2C8B37EF5DF91D84 /* Pods_CosmoQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C445A896CE1BB99EC9F5CC17 /* Pods_CosmoQuiz.framework */; };
+		79C0D29FB6811EC169D92936 /* Pods_CosmoQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93815DEF9284C72EE48115D /* Pods_CosmoQuiz.framework */; };
+		A44742A982E112F9C6A6E96F /* Pods_CosmoQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E2136C2CAB4C9916D65B89 /* Pods_CosmoQuizTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,11 +48,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		374CA317213FDFFFC5CF2A64 /* Pods_CosmoQuizUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmoQuizUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CBDF6ECB2D458B82FF3DEDF /* Pods-CosmoQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuiz.debug.xcconfig"; path = "Target Support Files/Pods-CosmoQuiz/Pods-CosmoQuiz.debug.xcconfig"; sourceTree = "<group>"; };
+		0FA619C79D4576B6B55C2C4C /* Pods_CosmoQuizUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmoQuizUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BF4BF68522F8BB13F12943B /* Pods-CosmoQuizUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuizUITests.release.xcconfig"; path = "Target Support Files/Pods-CosmoQuizUITests/Pods-CosmoQuizUITests.release.xcconfig"; sourceTree = "<group>"; };
+		66E5DE6BCF620444FBDA148D /* Pods-CosmoQuizUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuizUITests.debug.xcconfig"; path = "Target Support Files/Pods-CosmoQuizUITests/Pods-CosmoQuizUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E137161226A31900087E924 /* FirebaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPI.swift; sourceTree = "<group>"; };
 		6E137163226A34D80087E924 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6E3335422266D107005927C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		6E8FB6F42268F85E001CB8D8 /* DiscoverItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverItem.swift; sourceTree = "<group>"; };
+		6E548C2D226FFA4F002160F0 /* ApodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodViewController.swift; sourceTree = "<group>"; };
+		6E8FB6F42268F85E001CB8D8 /* ApodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodItem.swift; sourceTree = "<group>"; };
 		6E8FB6F62268FD12001CB8D8 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		6E9604AD226CECA900CE47DD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6E9604AF226CF2B200CE47DD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -71,14 +76,11 @@
 		6EEA60B2225B2DE300D809AA /* NasaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAPI.swift; sourceTree = "<group>"; };
 		6EEA60B7225BD93400D809AA /* QuizItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizItem.swift; sourceTree = "<group>"; };
 		6EFB23CA225C135500E4A2B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "/Users/pablo/Workspace/CosmoQuiz/CosmoQuiz/GoogleService-Info.plist"; sourceTree = "<absolute>"; };
-		7E9D2A2AD708309A20753B0E /* Pods-CosmoQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuiz.debug.xcconfig"; path = "Target Support Files/Pods-CosmoQuiz/Pods-CosmoQuiz.debug.xcconfig"; sourceTree = "<group>"; };
-		92A58082FF7651F25084C316 /* Pods-CosmoQuizUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuizUITests.release.xcconfig"; path = "Target Support Files/Pods-CosmoQuizUITests/Pods-CosmoQuizUITests.release.xcconfig"; sourceTree = "<group>"; };
-		9EB33C2ADFFEB78A6A0813DB /* Pods-CosmoQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuizTests.release.xcconfig"; path = "Target Support Files/Pods-CosmoQuizTests/Pods-CosmoQuizTests.release.xcconfig"; sourceTree = "<group>"; };
-		A16634DB5A193A9484B65F81 /* Pods-CosmoQuizUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuizUITests.debug.xcconfig"; path = "Target Support Files/Pods-CosmoQuizUITests/Pods-CosmoQuizUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		C445A896CE1BB99EC9F5CC17 /* Pods_CosmoQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmoQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8495BE9E8C7F2F78F126D3F /* Pods-CosmoQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuiz.release.xcconfig"; path = "Target Support Files/Pods-CosmoQuiz/Pods-CosmoQuiz.release.xcconfig"; sourceTree = "<group>"; };
-		DA3BA2D91391010018D42DBC /* Pods_CosmoQuizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmoQuizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5B3B087DB4D9000F498F1F4 /* Pods-CosmoQuizTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuizTests.debug.xcconfig"; path = "Target Support Files/Pods-CosmoQuizTests/Pods-CosmoQuizTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A4DBD4D3DAE2487094F3208 /* Pods-CosmoQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuiz.release.xcconfig"; path = "Target Support Files/Pods-CosmoQuiz/Pods-CosmoQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		D0991D0C3721884266082CD7 /* Pods-CosmoQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuizTests.release.xcconfig"; path = "Target Support Files/Pods-CosmoQuizTests/Pods-CosmoQuizTests.release.xcconfig"; sourceTree = "<group>"; };
+		E32C686D2FF33A88A37546F0 /* Pods-CosmoQuizTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoQuizTests.debug.xcconfig"; path = "Target Support Files/Pods-CosmoQuizTests/Pods-CosmoQuizTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E93815DEF9284C72EE48115D /* Pods_CosmoQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmoQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2E2136C2CAB4C9916D65B89 /* Pods_CosmoQuizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmoQuizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B49981B2C8B37EF5DF91D84 /* Pods_CosmoQuiz.framework in Frameworks */,
+				79C0D29FB6811EC169D92936 /* Pods_CosmoQuiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				594FA25FB66159CE31AE400B /* Pods_CosmoQuizTests.framework in Frameworks */,
+				A44742A982E112F9C6A6E96F /* Pods_CosmoQuizTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6810941DBD9BBB1BDEA0DBF0 /* Pods_CosmoQuizUITests.framework in Frameworks */,
+				0506D5ED8C9B540406CD5E8F /* Pods_CosmoQuizUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +119,7 @@
 				6EC6E0982257154C002D2232 /* CosmoQuizUITests */,
 				6EC6E07722571549002D2232 /* Products */,
 				D033D1FB6F2AA11EB61AE74A /* Pods */,
-				C412FAA3E20DB4D98CB6C640 /* Frameworks */,
+				AF9E4B8A38F84DB6A728B0A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,7 +170,7 @@
 			children = (
 				6EEA60B2225B2DE300D809AA /* NasaAPI.swift */,
 				6EEA60B7225BD93400D809AA /* QuizItem.swift */,
-				6E8FB6F42268F85E001CB8D8 /* DiscoverItem.swift */,
+				6E8FB6F42268F85E001CB8D8 /* ApodItem.swift */,
 				6E137161226A31900087E924 /* FirebaseAPI.swift */,
 			);
 			path = Models;
@@ -183,6 +185,7 @@
 				6E137163226A34D80087E924 /* RegisterViewController.swift */,
 				6E9604AD226CECA900CE47DD /* LoginViewController.swift */,
 				6E9604AF226CF2B200CE47DD /* ProfileViewController.swift */,
+				6E548C2D226FFA4F002160F0 /* ApodViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -196,12 +199,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C412FAA3E20DB4D98CB6C640 /* Frameworks */ = {
+		AF9E4B8A38F84DB6A728B0A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C445A896CE1BB99EC9F5CC17 /* Pods_CosmoQuiz.framework */,
-				DA3BA2D91391010018D42DBC /* Pods_CosmoQuizTests.framework */,
-				374CA317213FDFFFC5CF2A64 /* Pods_CosmoQuizUITests.framework */,
+				E93815DEF9284C72EE48115D /* Pods_CosmoQuiz.framework */,
+				F2E2136C2CAB4C9916D65B89 /* Pods_CosmoQuizTests.framework */,
+				0FA619C79D4576B6B55C2C4C /* Pods_CosmoQuizUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,12 +212,12 @@
 		D033D1FB6F2AA11EB61AE74A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7E9D2A2AD708309A20753B0E /* Pods-CosmoQuiz.debug.xcconfig */,
-				D8495BE9E8C7F2F78F126D3F /* Pods-CosmoQuiz.release.xcconfig */,
-				E5B3B087DB4D9000F498F1F4 /* Pods-CosmoQuizTests.debug.xcconfig */,
-				9EB33C2ADFFEB78A6A0813DB /* Pods-CosmoQuizTests.release.xcconfig */,
-				A16634DB5A193A9484B65F81 /* Pods-CosmoQuizUITests.debug.xcconfig */,
-				92A58082FF7651F25084C316 /* Pods-CosmoQuizUITests.release.xcconfig */,
+				0CBDF6ECB2D458B82FF3DEDF /* Pods-CosmoQuiz.debug.xcconfig */,
+				8A4DBD4D3DAE2487094F3208 /* Pods-CosmoQuiz.release.xcconfig */,
+				E32C686D2FF33A88A37546F0 /* Pods-CosmoQuizTests.debug.xcconfig */,
+				D0991D0C3721884266082CD7 /* Pods-CosmoQuizTests.release.xcconfig */,
+				66E5DE6BCF620444FBDA148D /* Pods-CosmoQuizUITests.debug.xcconfig */,
+				2BF4BF68522F8BB13F12943B /* Pods-CosmoQuizUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -226,11 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EC6E09E2257154C002D2232 /* Build configuration list for PBXNativeTarget "CosmoQuiz" */;
 			buildPhases = (
-				5146FB6A70FBDE20D63C6100 /* [CP] Check Pods Manifest.lock */,
+				6695195DD31E71E555DE2985 /* [CP] Check Pods Manifest.lock */,
 				6EC6E07222571549002D2232 /* Sources */,
 				6EC6E07322571549002D2232 /* Frameworks */,
 				6EC6E07422571549002D2232 /* Resources */,
-				A543CE7BD3F8D0197241071B /* [CP] Embed Pods Frameworks */,
+				097D4FE9E419B1701E344975 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,7 +248,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EC6E0A12257154C002D2232 /* Build configuration list for PBXNativeTarget "CosmoQuizTests" */;
 			buildPhases = (
-				C51CCB082D410E7BD7261F8E /* [CP] Check Pods Manifest.lock */,
+				0C443A09AA5FA61BA33FB0BF /* [CP] Check Pods Manifest.lock */,
 				6EC6E0862257154C002D2232 /* Sources */,
 				6EC6E0872257154C002D2232 /* Frameworks */,
 				6EC6E0882257154C002D2232 /* Resources */,
@@ -264,7 +267,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EC6E0A42257154C002D2232 /* Build configuration list for PBXNativeTarget "CosmoQuizUITests" */;
 			buildPhases = (
-				3B0EF13606E27F06E5006413 /* [CP] Check Pods Manifest.lock */,
+				3E04728FA2D65ADDB130FD99 /* [CP] Check Pods Manifest.lock */,
 				6EC6E0912257154C002D2232 /* Sources */,
 				6EC6E0922257154C002D2232 /* Frameworks */,
 				6EC6E0932257154C002D2232 /* Resources */,
@@ -354,51 +357,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3B0EF13606E27F06E5006413 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CosmoQuizUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5146FB6A70FBDE20D63C6100 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CosmoQuiz-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A543CE7BD3F8D0197241071B /* [CP] Embed Pods Frameworks */ = {
+		097D4FE9E419B1701E344975 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -428,7 +387,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CosmoQuiz/Pods-CosmoQuiz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C51CCB082D410E7BD7261F8E /* [CP] Check Pods Manifest.lock */ = {
+		0C443A09AA5FA61BA33FB0BF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -450,6 +409,50 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3E04728FA2D65ADDB130FD99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CosmoQuizUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6695195DD31E71E555DE2985 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CosmoQuiz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -459,10 +462,11 @@
 			files = (
 				6EC6E07C22571549002D2232 /* QuizViewController.swift in Sources */,
 				6E9604AE226CECA900CE47DD /* LoginViewController.swift in Sources */,
+				6E548C2E226FFA4F002160F0 /* ApodViewController.swift in Sources */,
 				6EEA60B8225BD93400D809AA /* QuizItem.swift in Sources */,
 				6E3335432266D108005927C6 /* HomeViewController.swift in Sources */,
 				6E137164226A34D80087E924 /* RegisterViewController.swift in Sources */,
-				6E8FB6F52268F85E001CB8D8 /* DiscoverItem.swift in Sources */,
+				6E8FB6F52268F85E001CB8D8 /* ApodItem.swift in Sources */,
 				6EEA60B3225B2DE300D809AA /* NasaAPI.swift in Sources */,
 				6EC6E07A22571549002D2232 /* AppDelegate.swift in Sources */,
 				6E9604B0226CF2B200CE47DD /* ProfileViewController.swift in Sources */,
@@ -642,7 +646,7 @@
 		};
 		6EC6E09F2257154C002D2232 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E9D2A2AD708309A20753B0E /* Pods-CosmoQuiz.debug.xcconfig */;
+			baseConfigurationReference = 0CBDF6ECB2D458B82FF3DEDF /* Pods-CosmoQuiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -661,7 +665,7 @@
 		};
 		6EC6E0A02257154C002D2232 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8495BE9E8C7F2F78F126D3F /* Pods-CosmoQuiz.release.xcconfig */;
+			baseConfigurationReference = 8A4DBD4D3DAE2487094F3208 /* Pods-CosmoQuiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -680,7 +684,7 @@
 		};
 		6EC6E0A22257154C002D2232 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5B3B087DB4D9000F498F1F4 /* Pods-CosmoQuizTests.debug.xcconfig */;
+			baseConfigurationReference = E32C686D2FF33A88A37546F0 /* Pods-CosmoQuizTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -702,7 +706,7 @@
 		};
 		6EC6E0A32257154C002D2232 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EB33C2ADFFEB78A6A0813DB /* Pods-CosmoQuizTests.release.xcconfig */;
+			baseConfigurationReference = D0991D0C3721884266082CD7 /* Pods-CosmoQuizTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -724,7 +728,7 @@
 		};
 		6EC6E0A52257154C002D2232 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A16634DB5A193A9484B65F81 /* Pods-CosmoQuizUITests.debug.xcconfig */;
+			baseConfigurationReference = 66E5DE6BCF620444FBDA148D /* Pods-CosmoQuizUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -745,7 +749,7 @@
 		};
 		6EC6E0A62257154C002D2232 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92A58082FF7651F25084C316 /* Pods-CosmoQuizUITests.release.xcconfig */;
+			baseConfigurationReference = 2BF4BF68522F8BB13F12943B /* Pods-CosmoQuizUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

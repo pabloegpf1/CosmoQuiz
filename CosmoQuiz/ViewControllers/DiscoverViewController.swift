@@ -17,9 +17,14 @@ class DiscoverViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var descriptionBox: UITextView!
+    @IBOutlet var buttons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        for button in self.buttons{
+            button.layer.cornerRadius = 15
+            button.clipsToBounds = true
+        }
         self.dateFormatter.dateFormat = "yyyy-MM-dd"
         selectedDate = getRandomDate()
         refreshUIElements()
@@ -27,14 +32,14 @@ class DiscoverViewController: UIViewController {
     
     func refreshUIElements(){
         let dateString = dateFormatter.string(from: self.selectedDate)
-        NasaAPI.request.getDiscoverItem(date: dateString, completion: { discoverItem in
-            if(discoverItem == nil){
+        NasaAPI.request.getAPODItem(date: dateString, completion: { apodItem in
+            if(apodItem == nil){
                 print("youtube url")
                 self.refreshUIElements()
             }else{
-                self.titleLabel.text = discoverItem?.title
-                self.descriptionBox.text = discoverItem?.description
-                self.image.image = discoverItem?.image
+                self.titleLabel.text = apodItem?.title
+                self.descriptionBox.text = apodItem?.description
+                self.image.image = apodItem?.image
             }
         })
     }

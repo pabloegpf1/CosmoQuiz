@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class DiscoverItem{
+class ApodItem{
     var title:String
     var image:UIImage
     var description:String

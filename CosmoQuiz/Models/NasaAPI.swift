@@ -15,10 +15,12 @@ struct NasaAPI{
     
     let jsonRequest = DispatchGroup()
     let imageDownload = DispatchGroup()
+    let dateFormatter = DateFormatter()
     
     func getQuizItem(completion: @escaping (QuizItem?) -> ()){
         
-        let url = "https://api.nasa.gov/planetary/apod?api_key=\(ProcessInfo.processInfo.environment["nasaApiKey"] ?? "")&count=4"
+        let url = "https://nasa-apod-cosmoquiz.herokuapp.com/api/\(getDateInterval())&thumbs=true"
+        print(url)
         var json:Array<[String:AnyObject]> = []
         let quizItem:QuizItem = QuizItem()
         
@@ -37,7 +39,11 @@ struct NasaAPI{
             for i in 0 ... json.count-1{
                 print("URL: ---->\(json[i]["url"] as! String)")
                 self.imageDownload.enter()
-                Alamofire.request(json[i]["url"] as! String).responseData { response in
+                var imageParameter = "url"
+                if(json[i]["media_type"] as! String == "video"){
+                    imageParameter = "thumbnail_url"
+                }
+                Alamofire.request(json[i][imageParameter] as! String).responseData { response in
                     if response.error == nil {
                         if let data = response.data {
                             quizItem.imageArray.append(UIImage(data: data)!)
@@ -56,10 +62,10 @@ struct NasaAPI{
         }
     }
     
-    func getDiscoverItem(date:String,completion: @escaping (DiscoverItem?) -> ()){
+    func getAPODItem(date:String,completion: @escaping (ApodItem?) -> ()){
         
-        let url = "https://api.nasa.gov/planetary/apod?api_key=\(ProcessInfo.processInfo.environment["nasaApiKey"] ?? "")&date=\(date)"
-        let discoverItem:DiscoverItem = DiscoverItem()
+        let url = "https://nasa-apod-cosmoquiz.herokuapp.com/api/?date=\(date)&thumbs=true"
+        let apodItem:ApodItem = ApodItem()
         var json:[String:AnyObject] = [:]
         
         jsonRequest.enter()
@@ -67,27 +73,44 @@ struct NasaAPI{
             print("RESPONSE: \(response)")
             json = response.result.value as! [String:AnyObject]
             
-            discoverItem.title = json["title"] as! String
-            discoverItem.description = json["explanation"] as! String
+            apodItem.title = json["title"] as! String
+            apodItem.description = json["description"] as! String
             
             self.jsonRequest.leave()
         }
         
         jsonRequest.notify(queue: .main) {
             self.imageDownload.enter()
-            Alamofire.request(json["url"] as! String).responseData { response in
+            var imageParameter = "url"
+            if(json["media_type"] as! String == "video"){
+                imageParameter = "thumbnail_url"
+            }
+            Alamofire.request(json[imageParameter] as! String).responseData { response in
                 guard let image = UIImage(data: response.data!) else{
                     print("Error: could not download Image")
                     return
                 }
-                discoverItem.image = image
+                apodItem.image = image
                 self.imageDownload.leave()
             }
             self.imageDownload.notify(queue: .main) {
-                completion(discoverItem)
+                completion(apodItem)
             }
         }
         
+    }
+    
+    func getAPOD(date:String,completion: @escaping (ApodItem?) -> ()){
+
+    }
+    
+    func getDateInterval() -> String{
+        self.dateFormatter.dateFormat = "yyyy-MM-dd"
+        var dateComponent = DateComponents()
+        dateComponent.day = -Int.random(in: 30...5*365)
+        let startDate = Calendar.current.date(byAdding: dateComponent, to: Date())!
+        let endDate = Calendar.current.date(byAdding: DateComponents(day: 3), to: startDate)!
+        return "?start_date=\(dateFormatter.string(from: startDate))&end_date=\(dateFormatter.string(from: endDate))"
     }
     
 }

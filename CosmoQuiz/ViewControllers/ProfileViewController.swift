@@ -21,6 +21,18 @@ class ProfileViewController: UIViewController {
         emailLabel.text = Auth.auth().currentUser?.email
     }
     
+    @IBAction func signOutButtonPressed(_ sender: Any) {
+        FirebaseAPI.request.signOut { (error) in
+            if(error == nil){
+                self.performSegue(withIdentifier: "profileToLogin", sender: self)
+            }else{
+                let alertController = UIAlertController(title: "Error", message: "Please Try Again", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
     
     
 }
