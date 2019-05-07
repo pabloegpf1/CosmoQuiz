@@ -1,6 +1,6 @@
 # CosmoQuiz
 <p align="center">
-<img src="https://i.imgur.com/60sCUHn.png" alt="User Authentication" width="150">
+<img src="https://i.imgur.com/60sCUHn.png" alt="App Icon" width="150">
 <p>
   
 ### Guess the name of archived Astronomy Pictures of the Day
