@@ -16,11 +16,19 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var ImageOutlet:[UIImageView]!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
     
+    var correctCounter = 0
+    var totalPoints = 0
     var correctImage = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        progressBar.progress = 0.0
+        progressBar.layer.cornerRadius = 10
+        progressBar.clipsToBounds = true
+        progressBar.layer.sublayers![1].cornerRadius = 10
+        progressBar.subviews[1].clipsToBounds = true
         nextQuizItem()
     }
     
@@ -57,36 +65,65 @@ class QuizViewController: UIViewController {
     
     @IBAction func tapped1(_ sender: Any) {
         highlightImages(selectedImage:0)
-        sleep(1)
-        nextQuizItem()
     }
     
     @IBAction func tapped2(_ sender: Any) {
         highlightImages(selectedImage:1)
-        sleep(1)
-        nextQuizItem()
     }
     
     @IBAction func tapped3(_ sender: Any) {
         highlightImages(selectedImage:2)
-        sleep(1)
-        nextQuizItem()
     }
     
     @IBAction func tapped4(_ sender: Any) {
         highlightImages(selectedImage:3)
-        sleep(1)
-        nextQuizItem()
     }
     
-    func highlightImages(selectedImage:Int){ //TO DO
-        ImageOutlet[selectedImage].layer.borderWidth = 10
-        if(selectedImage == correctImage){
-            ImageOutlet[selectedImage].layer.borderColor = UIColor.green.cgColor
+    func highlightImages(selectedImage:Int){ //CHECK IF CORRECT
+        if(selectedImage == correctImage){ //CORRECT
+            ImageOutlet[selectedImage].backgroundColor = UIColor.green
+            ImageOutlet[selectedImage].alpha = 0.5
+            self.correctCounter += 1
+            print("CORRECT:\(selectedImage)")
+        }else{ // INCORRECT
+            ImageOutlet[correctImage].backgroundColor = UIColor.green
+            ImageOutlet[selectedImage].backgroundColor = UIColor.red
+            ImageOutlet[correctImage].alpha = 0.5
+            ImageOutlet[selectedImage].alpha = 0.5
+            print("INCORRECT: \(selectedImage)---CORRECT: \(correctImage)")
+        }
+        sleep(1)
+        print("POINTS: \(correctCounter)")
+        ImageOutlet[correctImage].alpha = 1
+        ImageOutlet[selectedImage].alpha = 1
+        progressBar.progress += 0.2
+        if(progressBar.progress < 1){
+            nextQuizItem()
         }else{
-            ImageOutlet[correctImage].layer.borderWidth = 10
-            ImageOutlet[selectedImage].layer.borderColor = UIColor.red.cgColor
-            ImageOutlet[correctImage].layer.borderColor = UIColor.green.cgColor
+            print("END")
+            sendResults()
+        }
+    }
+    
+    func sendResults(){
+        FirebaseAPI.request.getTotalPoints(completion: {score in
+            if(score == nil){
+                self.totalPoints = 0
+            }else{
+                self.totalPoints = score!
+            }
+            FirebaseAPI.request.recordScore(score: self.correctCounter*10, completion: { error in
+                self.performSegue(withIdentifier: "quizToResults", sender: nil)
+            })
+        })
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "quizToResults" {
+            let viewController = segue.destination as! ResultsViewController
+            viewController.points = "\(correctCounter * 10)"
+            viewController.total = "\(totalPoints)"
+            viewController.results = "You got \(correctCounter) out of 5"
         }
     }
     

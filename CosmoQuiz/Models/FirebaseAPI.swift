@@ -10,6 +10,8 @@ import Firebase
 import FirebaseDatabase
 import FirebaseAuth
 
+var db: DatabaseReference!
+
 struct FirebaseAPI{
     
     static let request = FirebaseAPI()
@@ -57,6 +59,36 @@ struct FirebaseAPI{
         }
         completion(nil)
     }
+    
+    func getTotalPoints(completion: @escaping (Int?) -> ()){
+        var score = 0
+        db.child("LeaderBoard").child(Auth.auth().currentUser!.uid)
+            .observeSingleEvent(of: .value, with: { (snapshot) in
+                let value = snapshot.value as? NSDictionary
+                score = value?["score"] as? Int ?? 0
+                completion(score)
+            }){ (error) in
+                print(error.localizedDescription)
+                completion(nil)
+        }
+    }
+    
+    func recordScore(score:Int, completion: @escaping (Error?) -> ()){
+        db.child("LeaderBoard/").child(Auth.auth().currentUser!.uid)
+            .setValue([
+                "Player": Auth.auth().currentUser?.displayName ?? "Anonimous\(Int.random(in: 0..<1000))",
+                "Score": score
+            ]){(error:Error?, ref:DatabaseReference) in
+                if let error = error {
+                    print("Data could not be saved: \(error).")
+                    completion(error)
+                } else {
+                    print("Data saved successfully!")
+                    completion(nil)
+                }
+        }
+    }
+    
 
 }
 

@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true;
         for button in self.buttons{
             button.layer.cornerRadius = 15
             button.clipsToBounds = true

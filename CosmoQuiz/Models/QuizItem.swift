@@ -10,7 +10,10 @@ import Foundation
 import Alamofire
 
 class QuizItem{
-    var imageArray:Array<UIImage>, randomIndex:Int, randomTitle:String
+    
+    var imageArray:Array<UIImage>
+    var randomIndex:Int
+    var randomTitle:String
     
     init() {
         imageArray = Array<UIImage>()
