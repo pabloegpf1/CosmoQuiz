@@ -99,6 +99,46 @@
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <color key="sectionIndexColor" red="0.87043940360000005" green="0.5285576206" blue="0.18678034569999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="scoreCell" rowHeight="70" id="Efl-NG-QLN" customClass="LeaderboardTableViewCell" customModule="CosmoQuiz" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Efl-NG-QLN" id="5Pl-h4-RUo">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.666666666666671"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlO-ev-1rR">
+                                            <rect key="frame" x="16" y="24.666666666666671" width="150" height="20.333333333333329"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="pbY-1Y-7NZ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8xq-YB-IBz">
+                                            <rect key="frame" x="311" y="24" width="47" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="PlO-ev-1rR" secondAttribute="bottom" constant="14" id="Eme-EX-GvS"/>
+                                        <constraint firstItem="PlO-ev-1rR" firstAttribute="centerY" secondItem="5Pl-h4-RUo" secondAttribute="centerY" id="aVF-cM-eZB"/>
+                                        <constraint firstItem="8xq-YB-IBz" firstAttribute="baseline" secondItem="PlO-ev-1rR" secondAttribute="baseline" id="hH9-zd-KMF"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8xq-YB-IBz" secondAttribute="trailing" constant="1" id="p6f-iD-Fic"/>
+                                        <constraint firstItem="8xq-YB-IBz" firstAttribute="centerY" secondItem="PlO-ev-1rR" secondAttribute="centerY" id="w2d-K7-f07"/>
+                                        <constraint firstItem="PlO-ev-1rR" firstAttribute="leading" secondItem="5Pl-h4-RUo" secondAttribute="leadingMargin" id="zid-af-WD1"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="scoreLabel" destination="8xq-YB-IBz" id="E0a-ww-Qbu"/>
+                                    <outlet property="usernameLabel" destination="PlO-ev-1rR" id="XlQ-pu-MqF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="3sf-p2-Zld" id="rSN-3g-XOH"/>
@@ -407,7 +447,7 @@
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="mSH-ke-f9R" eventType="touchUpInside" id="6U9-Xk-nCz"/>
-                                    <segue destination="90O-zy-feS" kind="presentation" id="Oml-qB-pDF"/>
+                                    <segue destination="90O-zy-feS" kind="presentation" modalTransitionStyle="flipHorizontal" id="Oml-qB-pDF"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NE-zX-Fn2">

@@ -93,6 +93,25 @@ struct FirebaseAPI{
         }
     }
     
+    func getLeaderboard(completion: @escaping ([UserScore?]) -> ()){
+        
+        var scoreList = [UserScore]()
+        let leaderboardRef = db.child("LeaderBoard")
+        leaderboardRef.queryOrdered(byChild: "Score").observe(DataEventType.value, with: { (snapshot) in
+            
+            if snapshot.childrenCount > 0 {
+                for user in snapshot.children.allObjects as! [DataSnapshot] {
+                    let userDictionary = user.value as? [String: AnyObject]
+                    let username = userDictionary?["Player"] as? String
+                    let score  = String(userDictionary?["Score"] as! Int)
+                    let newUserScore = UserScore(username: username!, score: score)
+                    scoreList.append(newUserScore)
+                }
+                completion(scoreList)
+            }
+        })
+        
+    }
 
 }
 

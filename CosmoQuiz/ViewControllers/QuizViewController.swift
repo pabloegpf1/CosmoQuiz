@@ -100,7 +100,6 @@ class QuizViewController: UIViewController {
         if(progressBar.progress < 1){
             nextQuizItem()
         }else{
-            print("END")
             sendResults()
         }
     }
