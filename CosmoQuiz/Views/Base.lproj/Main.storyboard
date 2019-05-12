@@ -91,7 +91,7 @@
         <!--LeaderBoard-->
         <scene sceneID="sSZ-ue-Ud0">
             <objects>
-                <tableViewController title="LeaderBoard" id="3sf-p2-Zld" sceneMemberID="viewController">
+                <tableViewController title="LeaderBoard" id="3sf-p2-Zld" customClass="LeaderboardTableViewController" customModule="CosmoQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HDx-nP-WPS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

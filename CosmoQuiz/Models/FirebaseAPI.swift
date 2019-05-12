@@ -65,7 +65,8 @@ struct FirebaseAPI{
         db.child("LeaderBoard").child(Auth.auth().currentUser!.uid)
             .observeSingleEvent(of: .value, with: { (snapshot) in
                 let value = snapshot.value as? NSDictionary
-                score = value?["score"] as? Int ?? 0
+                score = value?["Score"] as? Int ?? 0
+                print("Previous points = \(score)")
                 completion(score)
             }){ (error) in
                 print(error.localizedDescription)
@@ -73,19 +74,22 @@ struct FirebaseAPI{
         }
     }
     
-    func recordScore(score:Int, completion: @escaping (Error?) -> ()){
-        db.child("LeaderBoard/").child(Auth.auth().currentUser!.uid)
-            .setValue([
-                "Player": Auth.auth().currentUser?.displayName ?? "Anonimous\(Int.random(in: 0..<1000))",
-                "Score": score
-            ]){(error:Error?, ref:DatabaseReference) in
-                if let error = error {
-                    print("Data could not be saved: \(error).")
-                    completion(error)
-                } else {
-                    print("Data saved successfully!")
-                    completion(nil)
-                }
+    func saveScore(score:Int, completion: @escaping (Error?) -> ()){
+        getTotalPoints { (points) in
+            db.child("LeaderBoard/").child(Auth.auth().currentUser!.uid)
+                .setValue([
+                    "Player": Auth.auth().currentUser?.displayName ?? "Anonimous\(Int.random(in: 0..<1000))",
+                    "Score": points!+score
+                ]){(error:Error?, ref:DatabaseReference) in
+                    if let error = error {
+                        print("Data could not be saved: \(error).")
+                        completion(error)
+                    } else {
+                        print("Data saved successfully!")
+                        print("New points = \(points!+score)")
+                        completion(nil)
+                    }
+            }
         }
     }
     

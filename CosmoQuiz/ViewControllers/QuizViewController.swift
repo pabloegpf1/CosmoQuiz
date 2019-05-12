@@ -112,17 +112,18 @@ class QuizViewController: UIViewController {
             }else{
                 self.totalPoints = score!
             }
-            FirebaseAPI.request.recordScore(score: self.correctCounter*10, completion: { error in
+            FirebaseAPI.request.saveScore(score: self.correctCounter*10, completion: { error in
                 self.performSegue(withIdentifier: "quizToResults", sender: nil)
             })
         })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let newPoints = correctCounter * 10
         if segue.identifier == "quizToResults" {
             let viewController = segue.destination as! ResultsViewController
-            viewController.points = "\(correctCounter * 10)"
-            viewController.total = "\(totalPoints)"
+            viewController.points = "\(newPoints)"
+            viewController.total = "\(totalPoints+newPoints)"
             viewController.results = "You got \(correctCounter) out of 5"
         }
     }
