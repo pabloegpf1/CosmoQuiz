@@ -21,6 +21,19 @@ class ApodViewController: UIViewController {
             button.layer.cornerRadius = 15
             button.clipsToBounds = true
         }
+        getApod()
+    }
+    
+    func getApod(){
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let today = formatter.string(from: date)
+        NasaAPI.request.getAPODItem(date: today) { (apodItem) in
+            self.titleLabel.text = apodItem?.title
+            self.imageOutlet.image = apodItem?.image
+            self.descriptionBox.text = apodItem?.description
+        }
     }
 
 }
