@@ -4,7 +4,7 @@
 <p>
   
 <p align="center">
-<a href="https://docs.google.com/presentation/d/e/2PACX-1vSfy4I6LiMrikLBM51KYAP6lZouP-xtzGuBX8ncxqVIN80IAAREzQgWHvyUMR02dZSEB_PVk8JsMalJ/pub?start=false&loop=false&delayms=60000&slide=id.g59ff6ee8e2_0_167">Link to interactive presentation</a>
+<a href="https://docs.google.com/presentation/d/e/2PACX-1vSfy4I6LiMrikLBM51KYAP6lZouP-xtzGuBX8ncxqVIN80IAAREzQgWHvyUMR02dZSEB_PVk8JsMalJ/pub?start=false&loop=false&delayms=60000">Link to interactive presentation</a>
 <p>
   
 ### Guess the name of archived Astronomy Pictures of the Day
