@@ -22,20 +22,6 @@ CosmoQuiz also lets you check the current APOD and share it in your social media
 * Developer: Pablo Escriva
 * Code reviewer: Liyao Jiang
 
-## Must-have Features
-1. User authentication - 3 hours
-2. Store user info (Points...) - 2 hours
-3. Quizes - 5 hours
-4. Discover page - 2 hours
-5. Picture of the day page - 1 hour
-6. leaderboard - 3 hours
-
-Total estimated hours: 16
-  
-## Nice-to-have Features
-1. Share to social media
-2. Save favorite images
-
 ## Wireframes
 
 ### User Authentication
